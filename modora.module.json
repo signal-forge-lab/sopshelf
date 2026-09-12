@@ -1,0 +1,23 @@
+{
+  "schema": "modora.module/v1",
+  "id": "sopshelf",
+  "name": "Sopshelf",
+  "description": "Local SOPS + age secret manager.",
+  "enabled": true,
+  "presentation": {
+    "pinned": true,
+    "order": 40,
+    "icon": {
+      "type": "file",
+      "value": "${MODULE_DIR}/assets/sopshelf-app-icon.png"
+    }
+  },
+  "capabilities": ["open", "status", "signals"],
+  "adapter": {
+    "protocol": "process-json-v1",
+    "command": "node",
+    "args": ["${MODULE_DIR}/modora-adapter.mjs"],
+    "cwd": "${MODULE_DIR}",
+    "timeoutMs": 8000
+  }
+}

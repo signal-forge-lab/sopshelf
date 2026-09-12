@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+keys.txt
+*.age
+*.sops.json
+backups/
+.piptmp/
+.serena/
+.tmp-tests/
+scratch-tmp/
+probe-*/
+py-newdir/
+_recovery_saved_workflow_source.js
