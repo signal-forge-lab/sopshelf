@@ -2,6 +2,12 @@ __pycache__/
 *.pyc
 .env
 .env.*
+secrets/
+local/
+config.local.json
+config.local.*
+local-config.json
+local-config.*
 *.pem
 *.key
 keys.txt

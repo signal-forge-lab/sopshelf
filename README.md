@@ -122,3 +122,13 @@ The GUI uses PySide6 (Qt for Python). PySide6 Community Edition is available und
 ## Project status
 
 This repository is published as an **in-development build**. It has automated tests and local security checks, but it should not be treated as an independently audited secret-management product.
+
+## Development workflow
+
+This public repository uses branches only for development stages, never as a confidentiality boundary:
+
+- `main` — public, reviewable baseline intended to stay usable.
+- `develop` — public integration branch for ongoing development.
+- `feature/*` — short-lived public branches for isolated changes when needed.
+
+Secrets, machine-specific paths and local-only configuration must not be committed to any branch. Keep them in SOPS or ignored local files/directories such as `.env`, `secrets/`, `local/` and `config.local.*`. If implementation code itself must remain private, use a separate private repository rather than a private-named branch in this repository.
